@@ -1,7 +1,9 @@
 <h1>Register</h1>
 
 <%= form_with model: @user do |form| %>
-
+    <div>
+        <%= link_to 'Back', users_path %>
+    </div>
     <div class="field">
         <%= form.label :first_name %>
         <%= form.text_field :first_name %>

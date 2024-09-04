@@ -1,0 +1,23 @@
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
+</p>
+<p>
+  <strong>Gender:</strong>
+  <%= @user.gender %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<p>
+  <strong>Phone Number:</strong>
+  <%= @user.phone_number %>
+</p>
+<p>
+  <strong>Subject:</strong>
+  <%= @user.subject %>
+</p>
+
+<%= link_to 'Back', users_path %>
