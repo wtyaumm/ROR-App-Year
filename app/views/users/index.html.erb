@@ -1,11 +1,22 @@
-<h1>Users</h1>
+<%= stylesheet_link_tag "index", "data-turbo-track": "reload" %>
 
-<%= link_to 'New User', new_user_path %>
+<div class="index-page">
+  <div class="header">
+    <p>Users</p>
 
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.first_name, user %>
-    </li>
-  <% end %>
-</ul>
+    <%= link_to 'New User', new_user_path %>
+  </div>
+
+  <div>
+    <% @users.each do |user| %>
+      <div class="row">
+        <div class="name">
+          <%= link_to user.first_name, user %> <%= link_to user.last_name, user %>
+        </div>
+        <div class="detail-button">
+          <%= link_to "More Info", user%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
