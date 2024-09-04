@@ -1,6 +1,10 @@
 <%= stylesheet_link_tag "new_and_edit", "data-turbo-track": "reload" %>
-<h1>Edit</h1>
-
-<div class="new-edit-form">
-    <%= render "form", user: @user%>
+<div class="new-page">
+    <div class="back">
+        <%= link_to '< Back', users_path %>
+    </div>
+    <p>Edit</p>
+    <div class="new-edit-form">
+        <%= render "form", user: @user%>
+    </div>
 </div>
