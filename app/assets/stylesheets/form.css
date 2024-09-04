@@ -1,0 +1,102 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .back {
+        color: black;
+        text-decoration: none;
+    }
+
+    .name, .birth-gender, .email-phone {
+        display: flex;
+        gap: 2rem;
+
+        .field {
+            width: 100%;
+        }
+    }
+
+    .option {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        .options {
+            display: flex;
+            padding: 0.5rem;
+            gap: 2rem;
+        }
+
+        .label {
+            margin: 0.5rem 0 0.5rem 0;
+        }
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+
+        .label {
+            margin: 0.5rem 0 0.5rem 0;
+        }
+
+        input {
+            padding: 0.5rem 0 0.5rem 0;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgb(242, 242, 242);
+        }
+    }
+
+    .selector {
+
+        .label {
+            margin: 0.5rem 0 0.5rem 0;
+        }
+        
+        select {
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgb(242, 242, 242);
+    
+            .select {
+                width: 100%;
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: end;
+        input {
+            background-color: rgb(87, 154, 231);
+            color: white;
+            border: 1px solid rgb(232, 232, 232);
+            padding: 0.7rem;
+            border-radius: 1.5rem;
+            margin-top: 2rem;
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 519px) {
+    .name, .birth-gender, .email-phone {
+        flex-direction: column;
+        gap: 0 !important;
+    }
+
+    .field {
+        margin-bottom: 1rem;
+    }
+
+    .actions {
+        input {
+            width: 100% !important;
+        }
+    }
+}
