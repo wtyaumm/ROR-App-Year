@@ -1,0 +1,50 @@
+<h1>Register</h1>
+
+<%= form_with model: @user do |form| %>
+
+    <div class="field">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name %>
+    </div>
+
+    <div class="field">
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name %>
+    </div>
+
+    <div class="field">
+        <%= form.label :birthday %>
+        <%= form.date_field :birthday %>
+    </div>
+
+    <div class="field">
+        <%= form.label :gender %>
+        <div>
+            <%= form.radio_button :gender, 'Male' %>
+            <%= form.label :gender_male, 'Male' %>
+        </div>
+        <div>
+            <%= form.radio_button :gender, 'Female' %>
+            <%= form.label :gender_female, 'Female' %>
+        </div>
+    </div>
+
+    <div class="field">
+        <%= form.label :email %>
+        <%= form.email_field :email %>
+    </div>
+
+    <div class="field">
+        <%= form.label :phone_number %>
+        <%= form.number_field :phone_number %>
+    </div>
+    
+    <div class="field">
+        <%= form.label :subject %>
+        <%= form.select :subject, [["Mr.", "Mr."], ["Ms.", "Ms."], ["Mrs.", "Mrs."]], prompt: "choose option" %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+<% end %>
