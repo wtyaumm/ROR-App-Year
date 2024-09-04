@@ -1,28 +1,36 @@
-<h1><%= @user.first_name %> <%= @user.last_name %></h1>
-<p>
-  <strong>Birthday:</strong>
-  <%= @user.birthday %>
-</p>
-<p>
-  <strong>Gender:</strong>
-  <%= @user.gender %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-<p>
-  <strong>Phone Number:</strong>
-  <%= @user.phone_number %>
-</p>
-<p>
-  <strong>Subject:</strong>
-  <%= @user.subject %>
-</p>
+<%= stylesheet_link_tag "show", "data-turbo-track": "reload" %>
 
-<%= link_to 'Back', users_path %>
-<%= link_to "Edit", edit_user_path(@user) %>
-<%= link_to "Destroy", user_path(@user), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %>
+<div class="show-page">
+  <div class="back">
+    <%= link_to '< Back', users_path %>
+  </div>
+  <p class="name"><%= @user.first_name %> <%= @user.last_name %></p>
+  <p>
+    <strong>Birthday:</strong>
+    <%= @user.birthday %>
+  </p>
+  <p>
+    <strong>Gender:</strong>
+    <%= @user.gender %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+  <p>
+    <strong>Phone Number:</strong>
+    <%= @user.phone_number %>
+  </p>
+  <p>
+    <strong>Subject:</strong>
+    <%= @user.subject %>
+  </p>
+
+  <div class="button">
+    <div class="edit"><%= link_to "Edit", edit_user_path(@user) %></div>
+    <div class="delete"><%= link_to "Destroy", user_path(@user), data: {
+                        turbo_method: :delete,
+                        turbo_confirm: "Are you sure?"
+                      } %></div>
+  </div>
+  </div>            
